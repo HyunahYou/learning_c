@@ -1,9 +1,7 @@
 #include "stdio.h"
 
 int main(void) {
-    int num;
-    printf("정수 입력: ");
-    scanf("%d", &num);
-    printf("부호 전환 결과: %d\n", ~num+1);
+    int num=3;
+    printf("3*8/4=%d\n", num<<3>>2);
     return 0;
 }
