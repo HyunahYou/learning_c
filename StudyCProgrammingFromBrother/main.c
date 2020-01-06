@@ -1,12 +1,11 @@
 #include "stdio.h"
 
 int main(void) {
-    printf("Q1\n");
-    printf("양의 정수 01001111의 10진수: %d\n", 79);
-    printf("양의 정수 00110011의 10진수: %d\n", 51);
+    int i;
+    float num=0.0;
 
-    printf("Q2\n");
-    printf("음의 정수 10101001의 10진수: %d\n", -87);
-    printf("음의 정수 11110000의 10진수: %d\n", -16);
+    for(i=0; i<100; i++)
+        num+=0.1;
+    printf("0.1을 100번 더한 결과: %f\n", num);
     return 0;
 }
