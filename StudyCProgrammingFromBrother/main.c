@@ -1,14 +1,12 @@
 #include "stdio.h"
 
 int main(void) {
-    int num1 = 0xA7, num2 = 0x43;
-    int num3 = 032, num4 = 024;
-    printf("0x47의 10진수 정수 값: %d\n", num1);
-    printf("0x43의 10진수 정수 값: %d\n", num2);
-    printf(" 032의 10진수 정수 값: %d\n", num3);
-    printf(" 024의 10진수 정수 값: %d\n", num4);
+    printf("Q1\n");
+    printf("양의 정수 01001111의 10진수: %d\n", 79);
+    printf("양의 정수 00110011의 10진수: %d\n", 51);
 
-    printf("%d-%d=%d\n", num1, num2, num1-num2);
-    printf("%d+%d=%d\n", num3, num4, num3+num4);
+    printf("Q2\n");
+    printf("음의 정수 10101001의 10진수: %d\n", -87);
+    printf("음의 정수 11110000의 10진수: %d\n", -16);
     return 0;
 }
