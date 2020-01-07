@@ -1,12 +1,12 @@
 #include "stdio.h"
 
 int main(void) {
-    double rad;
-    double area;
-    printf("원의 반지름 입력: ");
-    scanf("%lf", &rad);
+    char ch1='A', ch2=65;
+    int ch3='Z', ch4=90;
 
-    area=rad*rad*3.1415;
-    printf("원의 넓이: %f\n\n", area);
+    printf("%c %d\n", ch1, ch1);
+    printf("%c %d\n", ch2, ch2);
+    printf("%c %d\n", ch3, ch3);
+    printf("%c %d\n", ch4, ch4);
     return 0;
 }
