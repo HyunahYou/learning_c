@@ -1,14 +1,20 @@
+// Q3
+// 질문1) 아스키 코드를 구성하는 값의 범위는 어떻게 되는가?
+// 0~127
+// 질문2) 대문자 A에서부터 대문자 Z까지 값이 어떻게 증가하는가? 증가의 폭을 말해보자.
+// 1
+// 질문3) 알파벳 대문자와 소문자간의 값의 차는 어떻게 되는가? 규칙성을 찾아보자.
+// 32
+
+//Q4
 #include "stdio.h"
 
 int main(void) {
-    double num1, num2;
+    char num;
 
-    printf("두 개의 실수: ");
-    scanf("%lf, %lf", &num1, &num2);
+    printf("한 개의 정수 입력: ");
+    scanf("%d", &num);
 
-    printf("두 실수의 합: %f\n", num1+num2);
-    printf("두 실수의 차: %f\n", num1-num2);
-    printf("두 실수의 곱: %f\n", num1*num2);
-    printf("두 실수의 나눗셈: %f\n", num1/num2);
+    printf("해당 정수의 아스키 코드 문자: %c\n", num);
     return 0;
 }
