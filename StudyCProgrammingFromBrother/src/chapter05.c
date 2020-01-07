@@ -1,12 +1,17 @@
 #include "stdio.h"
 
 int main(void) {
-    char ch1='A', ch2=65;
-    int ch3='Z', ch4=90;
+    int x1, x2;
+    int y1, y2;
+    int s;
 
-    printf("%c %d\n", ch1, ch1);
-    printf("%c %d\n", ch2, ch2);
-    printf("%c %d\n", ch3, ch3);
-    printf("%c %d\n", ch4, ch4);
+    printf("좌 상단의 x, y 좌표: ");
+    scanf("%d, %d", &x1, &y1);
+
+    printf("우 하단의 x, y 좌표: ");
+    scanf("%d, %d", &x2, &y2);
+
+    s=(x2-x1)*(y2-y1);
+    printf("두 점이 이루는 직사각형의 넓이는 %d입니다.\n", s);
     return 0;
 }
