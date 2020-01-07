@@ -1,17 +1,14 @@
 #include "stdio.h"
 
 int main(void) {
-    int x1, x2;
-    int y1, y2;
-    int s;
+    double num1, num2;
 
-    printf("좌 상단의 x, y 좌표: ");
-    scanf("%d, %d", &x1, &y1);
+    printf("두 개의 실수: ");
+    scanf("%lf, %lf", &num1, &num2);
 
-    printf("우 하단의 x, y 좌표: ");
-    scanf("%d, %d", &x2, &y2);
-
-    s=(x2-x1)*(y2-y1);
-    printf("두 점이 이루는 직사각형의 넓이는 %d입니다.\n", s);
+    printf("두 실수의 합: %f\n", num1+num2);
+    printf("두 실수의 차: %f\n", num1-num2);
+    printf("두 실수의 곱: %f\n", num1*num2);
+    printf("두 실수의 나눗셈: %f\n", num1/num2);
     return 0;
 }
