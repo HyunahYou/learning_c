@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int num;
-    int total=0;
+    int dan;
+    int num=9;
+    printf("몇 단? ");
+    scanf("%d", &dan);
 
-    while (num!=0) {
-        printf("정수 입력: ");
-        scanf("%d", &num);
-        total+=num;
+    while (num>0) {
+        printf("%d*%d=%d\n", dan, num, dan*num);
+        num--;
     }
-    printf("정수의 총합: %d\n", total);
     return 0;
 }
