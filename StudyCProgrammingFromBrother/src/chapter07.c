@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int num1, num2;
-    int total=0;
+    int n=0;
+    int m;
 
-    printf("두 개의 정수 입력: ");
-    scanf("%d, %d", &num1, &num2);
-    for (total=0; num1<=num2; num1++) {
-        total+=num1;
+    printf("정수 입력: ");
+    scanf("%d", &n);
+    for (m=1; n>=1; n--) {
+        m*=n;
     }
-    printf("총합: %d\n", total);
+    printf("계승 결과: %d\n", m);
     return 0;
 }
