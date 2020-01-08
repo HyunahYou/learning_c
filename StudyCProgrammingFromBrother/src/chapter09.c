@@ -1,30 +1,16 @@
 #include <stdio.h>
 
-int Add(int num1, int num2) {
-return num1+num2;
-}
-
-void ShowAddResult (int num) {
-    printf("덧셈결과 출력: %d \n", num);
-}
-
-int ReadNum(void) {
-    int num;
-    scanf("%d", &num);
-    return num;
-}
-
-void HowToUseThisProg(void) {
-    printf("두 개의 정수를 입력하시면 덧셈결과가 출력됩니다. \n");
-    printf("자! 그럼 두 개의 정수를 입력하세요. \n");
-}
+int NumberCompare (int num1, int num2);
 
 int main(void) {
-    int result, num1, num2;
-    HowToUseThisProg();
-    num1=ReadNum();
-    num2=ReadNum();
-    result=Add(num1, num2);
-    ShowAddResult(result);
+    printf("3과 4중에서 큰 수는 %d 이다. \n", NumberCompare(3, 4));
+    printf("7과 2중에서 큰 수는 %d 이다. \n", NumberCompare(7, 2));
     return 0;
+}
+
+int NumberCompare (int num1, int num2) {
+    if (num1>num2)
+        return num1;
+    else
+        return num2;
 }
