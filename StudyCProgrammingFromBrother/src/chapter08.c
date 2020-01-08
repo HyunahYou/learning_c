@@ -1,12 +1,15 @@
 #include <stdio.h>
 
 int main(void) {
-    int num1, num2, result;
+    int sum=0, num=0;
 
-    printf("두 개의 정수 입력: ");
-    scanf("%d %d", &num1, &num2);
-
-    result=num1>num2 ? num1-num2 : num2-num1;
-    printf("뺄셈 결과: %d", result);
+    while (1) {
+        sum+=num;
+        if (sum>5000)
+            break;
+        num++;
+    }
+    printf("sum: %d\n", sum);
+    printf("num: %d\n", num);
     return 0;
 }
