@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int sum=0, num=0;
+    int num;
+    printf("start! ");
 
-    while (1) {
-        sum+=num;
-        if (sum>5000)
-            break;
-        num++;
+    for (num=1; num<20; num++) {
+        if (num%2==0 || num%3==0)
+            continue;
+        printf("%d ", num);
     }
-    printf("sum: %d\n", sum);
-    printf("num: %d\n", num);
+    printf("end!\n");
     return 0;
 }
