@@ -1,24 +1,21 @@
 #include <stdio.h>
 
 int main(void) {
-    char sel;
-    printf("M 오전, A 오후, E 저녁 \n");
-    printf("입력: ");
-    scanf("%c", &sel);
+    char num;
+    printf("0이상의 정수 입력: ");
+    scanf("%d", &num);
 
-    switch (sel) {
-        case 'M':
-        case 'm':
-            printf("Morning \n");
+    switch (num/10) {
+        case 0:
+            printf("0이상 10미만 \n");
             break;
-        case 'A':
-        case 'a':
-            printf("Afternoon \n");
+        case 1:
+            printf("10이상 20미만 \n");
             break;
-        case 'E':
-        case 'e':
-            printf("Evening \n");
-            break;
+        case 2:
+            printf("20이상 30미만");
+        default:
+            printf("30이상 \n");
     }
     return 0;
 }
