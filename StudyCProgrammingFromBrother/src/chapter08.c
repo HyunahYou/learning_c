@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 int main(void) {
-    int num;
-    printf("start! ");
-
-    for (num=1; num<20; num++) {
-        if (num%2==0 || num%3==0)
+    int cur, is;
+    for (cur=2; cur<10; cur++) {
+        if (cur%2!=0)
             continue;
-        printf("%d ", num);
+        for (is=1; is<10; is++) {
+            printf("%d*%d=%d\n", cur, is, cur*is);
+            if (cur<is+1)
+                break;
+        }
+        printf("\n");
     }
-    printf("end!\n");
     return 0;
 }
