@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int dan=0, num=1;
-    printf("몇 단? ");
-    scanf("%d", &dan);
+    int num1=0;
+    int num2;
+    printf("양의 정수 입력: ");
+    scanf("%d", &num2);
 
-    while (num<10) {
-        printf("%d*%d=%d\n", dan, num, dan*num);
-        num++;
+    while (num1<num2) {
+        printf("Hello world!\n");
+        num1++;
     }
     return 0;
 }
