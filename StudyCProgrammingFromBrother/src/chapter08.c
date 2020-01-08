@@ -1,16 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int cur, is;
-    for (cur=2; cur<10; cur++) {
-        if (cur%2!=0)
-            continue;
-        for (is=1; is<10; is++) {
-            printf("%d*%d=%d\n", cur, is, cur*is);
-            if (cur<is+1)
-                break;
-        }
-        printf("\n");
+    int A, Z;
+
+    for (A=0; A<10; A++) {
+        for (Z=0; Z<10; Z++)
+            if (Z!=9-A)
+                continue;
+            else break;
+            printf("%d%d+%d%d=%d\n", A, Z, Z, A, 99);
     }
     return 0;
 }
