@@ -1,16 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    double total=0.0;
-    double input=0.0;
-    int num=0;
+    int num1, num2;
+    int total=0;
 
-    for (; input>=0.0;) {
-        total+=input;
-        printf("실수 입력(minus to quit): ");
-        scanf("%lf", &input);
-        num++;
+    printf("두 개의 정수 입력: ");
+    scanf("%d, %d", &num1, &num2);
+    for (total=0; num1<=num2; num1++) {
+        total+=num1;
     }
-    printf("평균: %f\n", total/(num-1));
+    printf("총합: %d\n", total);
     return 0;
 }
