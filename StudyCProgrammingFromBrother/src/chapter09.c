@@ -1,30 +1,26 @@
 #include <stdio.h>
 
-double CelToFah(double n);
-
-double FahToCel(double n);
+void Fibo(int n) {
+    int f1=0, f2=1, f3, i;
+    if (n==1)
+        printf("%d ", f1);
+    else printf("%d %d ", f1, f2);
+    for (i=0; i<n-2; i++) {
+        f3=f1+f2;
+        printf("%d ", f3);
+        f1=f2;
+        f2=f3;
+    }
+}
 
 int main(void) {
-    int opt;
-    double num;
-    printf("1.섭씨온도 2.화씨온도\n");
-    printf("온도의 종류를 번호로 입력 후 온도를 입력: ");
-    scanf("%d %lf", &opt, &num);
-
-    switch (opt) {
-        case 1:
-            printf("섭씨 %lf도, 화씨 %lf도\n", num, CelToFah(num));
-            break;
-        case 2:
-            printf("화씨 %lf도, 섭씨 %lf도\n", num, FahToCel(num));
+    int n;
+    printf("수열의 갯수: ");
+    scanf("%d", &n);
+    if (n<1) {
+        printf("1 이상의 값을 입력하세요. \n");
+        return -1;
     }
+    Fibo(n);
     return 0;
-}
-
-double CelToFah (double n) {
-    return 1.8*n+32.0;
-}
-
-double FahToCel (double n) {
-    return (n-32.0)/1.8;
 }
