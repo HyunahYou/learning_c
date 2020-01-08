@@ -1,16 +1,13 @@
 #include <stdio.h>
 
 int main(void) {
-    int k=0, num=0;
+    int total=0, num=0;
 
-    while (k<5) {
-        while (num<k) {
-            printf("o ");
-            num++;
-        }
-        num=0;
-        printf("*\n");
-        k++;
-    }
+    do {
+        printf("정수 입력(0 to quit): ");
+        scanf("%d", &num);
+        total+=num;
+    } while (num!=0);
+    printf("합계: %d\n", total);
     return 0;
 }
