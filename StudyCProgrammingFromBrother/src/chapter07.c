@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int num1=1;
-    int num2;
-    printf("배수의 갯수: ");
-    scanf("%d", &num2);
+    int num;
+    int total=0;
 
-    while (num1<num2+1) {
-        printf("%d ", 3*num1);
-        num1++;
+    while (num!=0) {
+        printf("정수 입력: ");
+        scanf("%d", &num);
+        total+=num;
     }
+    printf("정수의 총합: %d\n", total);
     return 0;
 }
