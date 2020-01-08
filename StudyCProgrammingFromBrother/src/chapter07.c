@@ -1,14 +1,16 @@
 #include <stdio.h>
 
 int main(void) {
-    int dan;
-    int num=9;
-    printf("몇 단? ");
-    scanf("%d", &dan);
+    int num1, num2=0, num3, total=0;
+    printf("입력할 정수의 갯수: ");
+    scanf("%d", &num1);
 
-    while (num>0) {
-        printf("%d*%d=%d\n", dan, num, dan*num);
-        num--;
+    while (num2<num1) {
+        printf("정수 입력: ");
+        scanf("%d", &num3);
+        total+=num3;
+        num2++;
     }
+    printf("정수의 평균: %f\n", (double)total/num1); //★ %f ★
     return 0;
 }
