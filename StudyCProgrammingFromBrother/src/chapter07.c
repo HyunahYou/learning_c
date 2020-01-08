@@ -1,21 +1,17 @@
 #include <stdio.h>
 
 int main(void) {
-    int cur=0, total=0;
-    int num;
-    num>=1;
+    int cur=0, total=0, num=0;
 
     while (cur<5) {
-        printf("정수 입력: ");
-        scanf("%d", &num);
-        while (num<1) {
-            printf("정수 재입력: ");
+        while (num<=0) {
+            printf("0보다 큰 수를 입력(%d번째): ", cur+1);
             scanf("%d", &num);
         }
         total += num;
+        num=0;
         cur++;
     }
-
-    printf("정수의 총합: %d\n", total);
+    printf("총합: %d\n", total);
     return 0;
 }
