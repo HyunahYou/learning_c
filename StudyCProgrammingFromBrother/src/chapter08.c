@@ -2,10 +2,11 @@
 
 int main(void) {
     int num;
+    printf("정수 입력: ");
+    scanf("%d", &num);
 
-    for (num = 1; num < 100; num++) {
-        if (num%3==0 || num%4==0)
-            printf("3 또는 4의 배수: %d\n", num);
-    }
+    if (num<0)
+        printf("입력 값은 0보다 작다.\n");
+    else printf("입력 값은 0보다 작지 않다.\n");
     return 0;
 }
