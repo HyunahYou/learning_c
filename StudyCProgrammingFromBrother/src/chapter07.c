@@ -1,14 +1,12 @@
 #include <stdio.h>
 
 int main(void) {
-    int n=0;
-    int m;
+    int cur, is;
 
-    printf("정수 입력: ");
-    scanf("%d", &n);
-    for (m=1; n>=1; n--) {
-        m*=n;
+    for (cur=2; cur<10; cur++) {
+        for(is=1; is<10; is++)
+            printf("%d*%d=%d\n", cur, is, cur*is);
+        printf("\n");
     }
-    printf("계승 결과: %d\n", m);
     return 0;
 }
