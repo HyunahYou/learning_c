@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main(void) {
-    int num, abs;
-    printf("정수 입력: ");
-    scanf("%d", &num);
+    int num;
 
-    abs= num>0 ? num : num*(-1);
-    printf("절댓값: %d\n", abs);
+    for (num=1; num<100; num++) {
+        if (num%7==0 || num%9==0)
+            printf("%d\n", num);
+    }
     return 0;
 }
