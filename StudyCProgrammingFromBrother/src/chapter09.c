@@ -1,39 +1,30 @@
 #include <stdio.h>
 
-int MCompare(int n1, int n2);
-int mCompare(int n1, int n2);
-int Max(int num1, int num2, int num3);
-int mini(int num1, int num2, int num3);
+double CelToFah(double n);
+
+double FahToCel(double n);
 
 int main(void) {
-    int num1, num2, num3;
-    printf("세 개의 정수 입력: ");
-    scanf("%d %d %d", &num1, &num2, &num3);
-    printf("%d, %d, %d중 가장 큰 수: %d \n", num1, num2, num3, Max(num1, num2, num3));
-    printf("%d, %d, %d중 가장 작은 수: %d \n", num1, num2, num3, mini(num1, num2, num3));
+    int opt;
+    double num;
+    printf("1.섭씨온도 2.화씨온도\n");
+    printf("온도의 종류를 번호로 입력 후 온도를 입력: ");
+    scanf("%d %lf", &opt, &num);
+
+    switch (opt) {
+        case 1:
+            printf("섭씨 %lf도, 화씨 %lf도\n", num, CelToFah(num));
+            break;
+        case 2:
+            printf("화씨 %lf도, 섭씨 %lf도\n", num, FahToCel(num));
+    }
     return 0;
 }
 
-int MCompare (int n1, int n2) {
-    if (n1>n2)
-        return n1;
-    else return n2;
+double CelToFah (double n) {
+    return 1.8*n+32.0;
 }
 
-int mCompare (int n1, int n2) {
-    if (n1<n2)
-        return n1;
-    else return n2;
-}
-
-int Max (int num1, int num2, int num3) {
-    if (MCompare(num1, num2) > MCompare(num2, num3))
-        return MCompare(num1, num2);
-    else return MCompare(num2, num3);
-}
-
-int mini (int num1, int num2, int num3) {
-    if (mCompare(num1, num2) < mCompare(num2, num3))
-        return mCompare(num1, num2);
-    else return mCompare(num2, num3);
+double FahToCel (double n) {
+    return (n-32.0)/1.8;
 }
