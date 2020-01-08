@@ -1,11 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int total=0, num=1;
+    int cur = 2, is = 0;
     do {
-        total+=num*2;
-        num++;
-    } while (num<=50);
-    printf("0~100 중 짝수의 합계: %d\n", total);
+        is = 1;
+        do {
+            printf("%d*%d=%d\n", cur, is, cur * is);
+            is++;
+        } while (is < 10);
+        cur++;
+    } while (cur < 10);
     return 0;
 }
