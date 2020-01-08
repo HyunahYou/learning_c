@@ -1,14 +1,28 @@
 #include <stdio.h>
 
 int main(void) {
-    int A, Z;
+    int num;
+    printf("1이상 5이하의 정수 입력: ");
+    scanf("%d", &num);
 
-    for (A=0; A<10; A++) {
-        for (Z=0; Z<10; Z++)
-            if (Z!=9-A)
-                continue;
-            else break;
-            printf("%d%d+%d%d=%d\n", A, Z, Z, A, 99);
+    switch (num) {
+        case 1:
+            printf("1은 ONE \n");
+            break;
+        case 2:
+            printf("2는 TWO \n");
+            break;
+        case 3:
+            printf("3은 THREE \n");
+            break;
+        case 4:
+            printf("4는 FOUR \n");
+            break;
+        case 5:
+            printf("5는 FIVE \n");
+            break;
+        default:
+            printf("I don't know! \n");
     }
     return 0;
 }
