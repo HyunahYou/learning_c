@@ -1,16 +1,17 @@
 #include <stdio.h>
 
 int main (void) {
-    int num;
-    int h=0, m=0, s=0;
+    int n, k;
 
-    printf("초 입력: ");
-    scanf("%d", &num);
+    printf("입력: ");
+    scanf("%d", &n);
 
-    h=num/3600;
-    m=(num-h*3600)/60;
-    s=num-(h*3600)-(m*60);
-
-    printf("h: %d, m: %d, s: %d\n", h, m, s);
+    if (n==1)
+        printf("k=0");
+    else { for (k=0; n>1; k++) {
+            n /= 2;
+        }
+        printf("k=%d\n", k);
+    }
     return 0;
 }
