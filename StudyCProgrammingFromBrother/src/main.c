@@ -1,19 +1,3 @@
-//09-3 문제09-2
-//int AddToTotal (int num) {
-//    static int total=0;
-//    total+=num;
-//    return total;
-//}
-//int main (void) {
-//    int num, i;
-//    for (i=0; i<3; i++) {
-//        printf("입력%d: ", i+1);
-//        scanf("%d", &num);
-//        printf("누적: %d\n", AddToTotal(num));
-//    }
-//    return 0;
-//}
-
 //09-4 예제1
 //void Recursive (int num) {
 //    if (num<=0)

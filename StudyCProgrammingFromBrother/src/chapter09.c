@@ -1,16 +1,13 @@
 #include <stdio.h>
 
-int AddToTotal (int num) {
-    static int total=0;
-    total+=num;
-    return total;
+void Recursive (int num) {
+    if (num<=0)
+        return;
+    printf("Recursive call! %d\n", num);
+    Recursive(num-1);
 }
+
 int main (void) {
-    int num, i;
-    for (i=0; i<3; i++) {
-        printf("입력%d: ", i+1);
-        scanf("%d", &num);
-        printf("누적: %d\n", AddToTotal(num));
-    }
+    Recursive(3);
     return 0;
 }
