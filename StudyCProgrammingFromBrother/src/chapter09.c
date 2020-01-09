@@ -1,12 +1,17 @@
 #include <stdio.h>
 
+void Add (int val);
+int num;
+
 int main (void) {
-    int num=1;
-    if (num==1) {
-//        int num=7;
-        num+=10;
-        printf("if문 내 지역변수 num: %d\n", num);
-    }
-    printf("main 함수 내 지역변수 num: %d\n", num);
+    printf("num: %d\n", num);
+    Add(3);
+    printf("num: %d\n", num);
+    num++;
+    printf("num: %d\n", num);
     return 0;
+}
+
+void Add (int val) {
+    num+=val;
 }
