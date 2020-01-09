@@ -1,22 +1,26 @@
 #include <stdio.h>
 
+int GCD (int g1, int g2);
+
 int main (void) {
-
-    int dan1, dan2, is;
-
-    printf("구구단을 출력할 두 개의 단 입력: ");
-    scanf("%d, %d", &dan1, &dan2);
-
-    if (dan1<dan2) {
-        for (; dan1<=dan2; dan1++) {
-            for (is=1; is<10; is++)
-                printf("%d*%d=%d\n", dan1, is, dan1*is);
-            printf("\n");
-        }
-    } else for (; dan2<=dan1; dan2++) {
-            for (int is=1; is<10; is++)
-                printf("%d*%d=%d\n", dan2, is, dan2*is);
-            printf("\n");
-        }
+    int num1, num2;
+    printf("두 정수 입력: ");
+    scanf("%d, %d", &num1, &num2);
+    printf("두 수의 최대공약수: %d\n", GCD(num1, num2));
     return 0;
+}
+
+int GCD (int g1, int g2) {
+    int gcd,GCD;
+
+    if (g1>g2) {
+        for (gcd=1; gcd<=g2; gcd++) {
+            if (g1%gcd==0 && g2%gcd==0)
+                GCD=gcd;
+        }
+    } else for (gcd=1; gcd<=g1; gcd++) {
+            if (g1%gcd==0 && g2%gcd==0)
+                GCD=gcd;
+        }
+    return GCD;
 }
