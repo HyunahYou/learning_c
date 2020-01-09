@@ -1,26 +1,24 @@
 #include <stdio.h>
 
-void Fibo(int n) {
-    int f1=0, f2=1, f3, i;
-    if (n==1)
-        printf("%d ", f1);
-    else printf("%d %d ", f1, f2);
-    for (i=0; i<n-2; i++) {
-        f3=f1+f2;
-        printf("%d ", f3);
-        f1=f2;
-        f2=f3;
-    }
+int SimpleFuncOne (void) {
+    int num=10;
+    num++;
+    printf("SimpleFuncOne num: %d\n", num);
+    return 0;
+}
+
+int SimpleFuncTwo (void) {
+    int num1=20;
+    int num2=30;
+    num1++, num2--;
+    printf("num1 & num2: %d %d\n", num1, num2);
+    return 0;
 }
 
 int main(void) {
-    int n;
-    printf("수열의 갯수: ");
-    scanf("%d", &n);
-    if (n<1) {
-        printf("1 이상의 값을 입력하세요. \n");
-        return -1;
-    }
-    Fibo(n);
+    int num=17;
+    SimpleFuncOne();
+    SimpleFuncTwo();
+    printf("main num: %d\n", num);
     return 0;
 }
