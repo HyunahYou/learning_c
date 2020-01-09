@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-void Add (int val);
-int num;
+int Add (int val);
+int num=1;
 
 int main (void) {
-    printf("num: %d\n", num);
-    Add(3);
-    printf("num: %d\n", num);
-    num++;
-    printf("num: %d\n", num);
+    int num=5;
+    printf("num: %d\n", Add(3));
+    printf("num: %d\n", num+9);
     return 0;
 }
 
-void Add (int val) {
+int Add (int val) {
+    int num=9;
     num+=val;
+    return num;
 }

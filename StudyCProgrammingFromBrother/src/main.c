@@ -1,20 +1,3 @@
-//09-3 예제1
-//void Add (int val);
-//int num;
-//
-//int main (void) {
-//    printf("num: %d\n", num);
-//    Add(3);
-//    printf("num: %d\n", num);
-//    num++;
-//    printf("num: %d\n", num);
-//    return 0;
-//}
-//
-//void Add (int val) {
-//    num+=val;
-//}
-
 //09-3 예제2
 //int Add (int val);
 //int num=1;
