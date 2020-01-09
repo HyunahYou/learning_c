@@ -1,16 +1,12 @@
 #include <stdio.h>
 
-int main(void) {
-    int cnt;
-    for (cnt=0; cnt<3; cnt++) {
-        int num=0;
-        num++;
-        printf("%d번째 반복, 지역변수 num은 %d.\n", cnt+1, num);
+int main (void) {
+    int num=1;
+    if (num==1) {
+//        int num=7;
+        num+=10;
+        printf("if문 내 지역변수 num: %d\n", num);
     }
-    if (cnt==3) {
-        int num=7;
-        num++;
-        printf("if문 내에 존재하는 지역변수 num은 %d. \n", num);
-    }
+    printf("main 함수 내 지역변수 num: %d\n", num);
     return 0;
 }
