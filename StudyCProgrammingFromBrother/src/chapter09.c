@@ -1,24 +1,16 @@
 #include <stdio.h>
 
-int SimpleFuncOne (void) {
-    int num=10;
-    num++;
-    printf("SimpleFuncOne num: %d\n", num);
-    return 0;
-}
-
-int SimpleFuncTwo (void) {
-    int num1=20;
-    int num2=30;
-    num1++, num2--;
-    printf("num1 & num2: %d %d\n", num1, num2);
-    return 0;
-}
-
 int main(void) {
-    int num=17;
-    SimpleFuncOne();
-    SimpleFuncTwo();
-    printf("main num: %d\n", num);
+    int cnt;
+    for (cnt=0; cnt<3; cnt++) {
+        int num=0;
+        num++;
+        printf("%d번째 반복, 지역변수 num은 %d.\n", cnt+1, num);
+    }
+    if (cnt==3) {
+        int num=7;
+        num++;
+        printf("if문 내에 존재하는 지역변수 num은 %d. \n", num);
+    }
     return 0;
 }
