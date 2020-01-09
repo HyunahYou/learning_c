@@ -1,29 +1,3 @@
-//09-4 예제2
-//int Factorial (int n) {
-//    if (n==0)
-//        return 1;
-//    else return n*Factorial(n-1);
-//}
-//
-//int main (void) {
-//    printf("1!=%d\n", Factorial(1));
-//    printf("2!=%d\n", Factorial(2));
-//    printf("3!=%d\n", Factorial(3));
-//    printf("4!=%d\n", Factorial(4));
-//    printf("9!=%d\n", Factorial(9));
-//    return 0;
-//}
-
-//chapter10
-//도전1
-//int main (void) {
-//    int num;
-//    printf("정수 입력: ");
-//    scanf("%d", &num);
-//    printf("%d의 16진수 값: %X\n", num, num);
-//    return 0;
-//}
-
 //도전2
 //int main (void) {
 //
