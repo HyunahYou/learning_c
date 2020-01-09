@@ -1,16 +1,3 @@
-//09-4 예제1
-//void Recursive (int num) {
-//    if (num<=0)
-//        return;
-//    printf("Recursive call! %d\n", num);
-//    Recursive(num-1);
-//}
-//
-//int main (void) {
-//    Recursive(3);
-//    return 0;
-//}
-
 //09-4 예제2
 //int Factorial (int n) {
 //    if (n==0)
