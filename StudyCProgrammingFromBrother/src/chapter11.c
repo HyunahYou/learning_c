@@ -1,18 +1,16 @@
 #include <stdio.h>
 
 int main (void) {
-    char str[50];
-    int idx=0;
+    char str[50]="I like C programming";
+    printf ("string: %s\n", str);
 
-    printf("문자열 입력: ");
-    scanf("%s", str);
-    printf("입력 받은 문자열: %s\n", str);
+    str[8]='\0';
+    printf("string: %s\n", str);
 
-    printf("문자 단위 출력: ");
-    while (str[idx]!='\0') {
-        printf("%c", str[idx]);
-        idx++;
-    }
-    printf("\n");
+    str[6]='\0';
+    printf("string: %s\n", str);
+
+    str[1]='\0';
+    printf("string: %s\n", str);
     return 0;
 }
