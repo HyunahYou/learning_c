@@ -1,29 +1,42 @@
 #include <stdio.h>
 
 int main (void) {
-    int arr1[5]={1, 2, 3, 4, 5};
-    int arr2[]={1, 2, 3, 4, 5, 6, 7};
-    int arr3[5]={1, 2};
-    int ar1Len, ar2Len, ar3Len, i;
+    int arr[5];
+    int sum=0;
 
-    printf("배열 arr1의 크기: %d\n", sizeof(arr1));
-    printf("배열 arr2의 크기: %d\n", sizeof(arr2));
-    printf("배열 arr3의 크기: %d\n", sizeof(arr3));
+    printf("5개의 정수 입력: ");
+    scanf("%d %d %d %d %d", &arr[0], &arr[1], &arr[2], &arr[3], &arr[4]);
 
-    ar1Len=sizeof(arr1)/sizeof(int);
-    ar2Len=sizeof(arr2)/sizeof(int);
-    ar3Len=sizeof(arr3)/sizeof(int);
-
-    for (i=0; i<ar1Len; i++)
-        printf("%d ",arr1[i]);
+    printf("입력된 정수 중 최댓값: ");
+    if (arr[0]>arr[1] && arr[0]>arr[2] && arr[0]>arr[3]&& arr[0]>arr[4])
+        printf("%d", arr[0]);
+    else if (arr[1]>arr[0] && arr[1]>arr[2] && arr[1]>arr[3]&& arr[1]>arr[4])
+        printf("%d", arr[1]);
+    else if (arr[2]>arr[0] && arr[2]>arr[1] && arr[2]>arr[3]&& arr[2]>arr[4])
+        printf("%d", arr[2]);
+    else if (arr[3]>arr[0] && arr[3]>arr[1] && arr[3]>arr[2]&& arr[3]>arr[4])
+        printf("%d", arr[3]);
+    else if (arr[4]>arr[0] && arr[4]>arr[1] && arr[4]>arr[2]&& arr[4]>arr[3])
+        printf("%d", arr[4]);
     printf("\n");
 
-    for (i=0; i<ar2Len; i++)
-        printf("%d ",arr2[i]);
+    printf("입력된 정수 중 최솟값: ");
+    if (arr[0]<arr[1] && arr[0]<arr[2] && arr[0]<arr[3]&& arr[0]<arr[4])
+        printf("%d", arr[0]);
+    else if (arr[1]<arr[0] && arr[1]<arr[2] && arr[1]<arr[3]&& arr[1]<arr[4])
+        printf("%d", arr[1]);
+    else if (arr[2]<arr[0] && arr[2]<arr[1] && arr[2]<arr[3]&& arr[2]<arr[4])
+        printf("%d", arr[2]);
+    else if (arr[3]<arr[0] && arr[3]<arr[1] && arr[3]<arr[2]&& arr[3]<arr[4])
+        printf("%d", arr[3]);
+    else if (arr[4]<arr[0] && arr[4]<arr[1] && arr[4]<arr[2]&& arr[4]<arr[3])
+        printf("%d", arr[4]);
     printf("\n");
 
-    for (i=0; i<ar3Len; i++)
-        printf("%d ",arr3[i]);
-    printf("\n");
+    for (int i=0; i<5; i++) {
+        sum+=arr[i];
+    }
+    printf("입력된 정수의 총합: %d\n", sum);
+
     return 0;
 }
