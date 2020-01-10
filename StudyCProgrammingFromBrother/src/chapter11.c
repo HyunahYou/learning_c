@@ -1,16 +1,13 @@
 #include <stdio.h>
 
 int main (void) {
-    char str[50]="I like C programming";
-    printf ("string: %s\n", str);
+    char word[50];
+    int idx=0;
 
-    str[8]='\0';
-    printf("string: %s\n", str);
-
-    str[6]='\0';
-    printf("string: %s\n", str);
-
-    str[1]='\0';
-    printf("string: %s\n", str);
+    printf("영단어 입력: ");
+    scanf("%s", word);
+    printf("글자 수: ");
+    for (; word[idx]!='\0'; idx++);
+    printf("%d", idx);
     return 0;
 }
