@@ -1,30 +1,23 @@
 #include <stdio.h>
 
-int odd (int*ptr1) {
-    for (int i=0; i<10; i++) {
-        if (ptr1[i]%2 != 0)
-            printf("%d ", ptr1[i]);
-    }
-}
-int even (int*ptr2) {
-    for (int i=0; i<10; i++) {
-        if (ptr2[i]%2 == 0)
-            printf("%d ", ptr2[i]);
-    }
-}
-
 int main (void) {
-    int arr[10];
-    for (int i=0; i<10; i++) {
-        printf("입력: ");
-        scanf("%d", &arr[i]);
-    }
-    printf("홀수 출력: ");
-    odd(&arr);
-    printf("\n");
-    printf("짝수 출력: ");
-    even(&arr);
-    printf("\n");
+    int i, num;
+    int cnt=0;
+    int arr[100];
 
+    printf("입력: ");
+    scanf("%d", &num);
+
+    for (i=0; i<100; i++) {
+        if (num!=0) {
+            arr[i]=num%2;
+            num=num/2;
+            cnt++;
+        } else break;
+    }
+    for (i=cnt; i>0; i--) {
+        printf("%d", arr[i-1]);
+    }
+    printf("\n");
     return 0;
 }
