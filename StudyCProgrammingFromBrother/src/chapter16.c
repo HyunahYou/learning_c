@@ -1,19 +1,21 @@
 #include <stdio.h>
 
 int main (void) {
-    int arr[3][9];
+    int A[2][4]={
+            {1, 2, 3, 4},
+            {5, 6, 7, 8}
+    };
+    int B[4][2];
     int i, j;
 
-    /* 구구단 저장 */
-    for (i=0; i<3; i++) {
-        for (j=0; j<9; j++)
-            arr[i][j]=(i+2)*(j+1);
+    for (i=0; i<2; i++) {
+        for (j=0; j<4; j++)
+            B[j][i]=A[i][j];
     }
 
-    /* 구구단 출력 */
-    for (i=0; i<3; i++) {
-        for (j=0; j<9; j++)
-            printf("%4d", arr[i][j]);
+    for (i=0; i<4; i++) {
+        for (j=0; j<2; j++)
+            printf("%2d", B[i][j]);
         printf("\n");
     }
     return 0;
