@@ -1,22 +1,28 @@
 #include <stdio.h>
 
 int main (void) {
-    int i, num;
-    int cnt=0;
-    int arr[100];
+    int num;
+    int arr[10];
+    int s=0, e=9;
 
-    printf("입력: ");
-    scanf("%d", &num);
+    printf("총 10개의 숫자 입력\n");
+    for (int k=0; k<10; k++) {
+        printf("입력: ");
+        scanf("%d", &num);
 
-    for (i=0; i<100; i++) {
-        if (num!=0) {
-            arr[i]=num%2;
-            num=num/2;
-            cnt++;
-        } else break;
+        if (num%2 != 0) {
+            arr[s] = num;
+            s++;
+        }
+        else {
+            arr[e] = num;
+            e--;
+        }
     }
-    for (i=cnt; i>0; i--) {
-        printf("%d", arr[i-1]);
+
+    printf("배열 요소의 출력: ");
+    for (int n=0; n<10; n++) {
+     printf("%d ", arr[n]);
     }
     printf("\n");
     return 0;
