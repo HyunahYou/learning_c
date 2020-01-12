@@ -1,29 +1,21 @@
 #include <stdio.h>
 
 int main (void) {
-    int num;
-    int arr[10];
-    int s=0, e=9;
+    int len=0, cnt=0;
+    char word[50];
 
-    printf("총 10개의 숫자 입력\n");
-    for (int k=0; k<10; k++) {
-        printf("입력: ");
-        scanf("%d", &num);
+    printf("문자열 입력: ");
+    scanf("%s", word);
 
-        if (num%2 != 0) {
-            arr[s] = num;
-            s++;
-        }
-        else {
-            arr[e] = num;
-            e--;
-        }
+    while (word[len] != '\0')
+        len++;
+    for (int i=0; i<len/2; i++) {
+        if (word[i] == word[len-i-1])
+            cnt++;
     }
+    if (cnt==len/2)
+        printf("회문입니다.\n");
+    else printf("회문이 아닙니다.\n");
 
-    printf("배열 요소의 출력: ");
-    for (int n=0; n<10; n++) {
-     printf("%d ", arr[n]);
-    }
-    printf("\n");
     return 0;
 }
