@@ -1,45 +1,20 @@
 #include <stdio.h>
 
 int main (void) {
+    int arr[3][9];
     int i, j;
 
-    /* 2차원 배열 초기화의 예 1 */
-    int arr1[3][3]={
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
-    };
-
-    /* 2차원 배열 초기화의 예 2 */
-    int arr2[3][3]={
-            {1},
-            {4, 5},
-            {7, 8, 9}
-    };
-
-    /* 2차원 배열 초기화의 예 3 */
-    int arr3[3][3]={1, 2, 3, 4, 5, 6, 7};
-
+    /* 구구단 저장 */
     for (i=0; i<3; i++) {
-        for (j=0; j<3; j++)
-            printf("%d ", arr1[i][j]);
+        for (j=0; j<9; j++)
+            arr[i][j]=(i+2)*(j+1);
+    }
+
+    /* 구구단 출력 */
+    for (i=0; i<3; i++) {
+        for (j=0; j<9; j++)
+            printf("%4d", arr[i][j]);
         printf("\n");
     }
-    printf("\n");
-
-    for (i=0; i<3; i++) {
-        for (j=0; j<3; j++)
-            printf("%d ", arr2[i][j]);
-        printf("\n");
-    }
-    printf("\n");
-
-    for (i=0; i<3; i++) {
-        for (j=0; j<3; j++)
-            printf("%d ", arr3[i][j]);
-        printf("\n");
-    }
-    printf("\n");
-
     return 0;
 }
