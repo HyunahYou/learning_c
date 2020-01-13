@@ -1,38 +1,18 @@
 #include <stdio.h>
 
 int main (void) {
-    int arr1[2][2]={
-            {1, 2},
-            {3, 4}
-    };
-    int arr2[3][2]={
-            {1, 2},
-            {3, 4},
-            {5, 6}
-    };
-    int arr3[4][2]={
-            {1, 2},
-            {3, 4},
-            {5, 6},
-            {7, 8}
-    };
+    int num1=10, num2=20, num3=30, num4=40;
+    int arr2d[2][4]={1, 2, 3, 4, 5, 6, 7, 8};
+    int i, j;
 
-    int (*ptr)[2];
-    int i;
+    int*whoA[4]={&num1, &num2, &num3, &num4};
+    int (*whoB)[4]=arr2d;
 
-    ptr=arr1;
-    printf("** Show 2,2 arr1 **\n");
-    for (i=0; i<2; i++)
-        printf("%d %d\n", ptr[i][0], ptr[i][1]);
-
-    ptr=arr2;
-    printf("** Show 3,2 arr2 **\n");
-    for (i=0; i<3; i++)
-        printf("%d %d\n", ptr[i][0], ptr[i][1]);
-
-    ptr=arr3;
-    printf("**  Show 4,2 arr3 **\n");
-    for (i=0; i<4; i++)
-        printf("%d %d\n", ptr[i][0], ptr[i][1]);
+    printf("%d %d %d %d\n", *whoA[0], *whoA[1], *whoA[2], *whoA[3]);
+    for (i=0; i<2; i++) {
+        for (j=0; j<4; j++)
+            printf("%d ", whoB[i][j]);
+        printf("\n");
+    }
     return 0;
 }
