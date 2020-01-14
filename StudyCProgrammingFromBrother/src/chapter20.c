@@ -1,15 +1,17 @@
-/* 도전3. 주어진 예제를 변경해 0이상 99이하의 난수를 총 5개 생성하는 프로그램을 작성해보자. */
+/* 도전4. 두 개의 주사위를 던졌을 때 결과 출력. (단, 결과는 예측불가할 것) */
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main (void) {
-    int i, random;
-    printf("난수의 범위: 0부터 99까지\n");
+    int i, t;
 
-    for (i = 0; i < 5;) {
-        random=rand();
-        if (random<=99) {
-            printf("난수 출력: %d\n", random);
+    srand((int)time(NULL));
+
+    for (i=0; i<2;) {
+        t = rand();
+        if (0<t && t<=6) {
+            printf("주사위 %d의 결과 %d\n", i + 1, t);
             i++;
         }
     }
